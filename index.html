@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="Stylesheet" href="style.css" type="text/css" />
+        <title>Hexy</title>
+        <!-- I'm.... too hexy for my shirt... -->
+    </head>
+    <body>
+        <div class="caps">
+            Hexy<br />Form a bridge with your hexes,
+            and try to block the other player.
+        </div>
+        <div style="text-align:center;">
+            <canvas id="mainCanvas" width="1080" height="675"
+                    onmousemove="updateMousePosition(event)"
+                    onclick="mouseClicked()">
+                Your browser doesn't support HTML5. Upgrade to something better.
+            </canvas>
+        </div>
+
+        <!-- Main script for game, takes care of setup and getting things going,
+        then the rest of the input comes from the user interacting with the 
+        canvas... -->
+        <script type="text/javascript" src="main.js"></script>
+        <script type="text/javascript">
+            function selectBoardSize(size) {
+                //Hide the selector and init the game.
+                document.getElementById('selectSize').style.display = "None";
+                initEverything(size);
+            }
+        </script>
+        <div id="scoreboard">
+            <table>
+                <tr>
+                    <td id="playerAScore">0</td>
+                    <td id="playerBScore">0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="caps" style="width: 600px; margin-left: auto; margin-right: auto;">
+            Refresh page to clear scores.<br /><br />
+            <span style="color: #666; font-variant: normal;">
+                Hexy by Alex Kersten <!-- as an experiment in HTML5 Canvas. Not guaranteed to be 100% bug-free (there might be corner cases I didn't account for, but I believe it should be pretty complete). Try to break it and let me know if you succeed. Tested on Firefox 15, will probably work on Chrome.--><br />v1.1
+            </span>
+        </div>
+        <div id="selectSize">
+            Select board size:<br />
+            <table>
+                <tr>
+                    <td onclick="selectBoardSize(8)">Small</td>
+                </tr>
+                <tr>
+                    <td onclick="selectBoardSize(11)">Medium</td>
+                </tr>
+                <tr>
+                    <td onclick="selectBoardSize(14)">Large</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
+
