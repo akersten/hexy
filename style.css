@@ -45,13 +45,13 @@ div#scoreboard table {
 }
 
 td#playerAScore {
-    background-color: #020;
-    border: 1px solid #003F00;
+    background-color: #005588;
+    border: 1px solid #0077BB;
 }
 
 td#playerBScore {
-    background-color: #220;
-    border: 1px solid #3F3F00;
+    background-color: #990000;
+    border: 1px solid #CC0000;
 }
 
 div.caps {

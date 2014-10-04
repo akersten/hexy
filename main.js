@@ -142,10 +142,10 @@ function paintBackground() {
     if (gameOver) {
         if (!turn) {
             // Player A won
-            context.fillStyle = "#020";
+            context.fillStyle = "#005588";
         } else {
             // Player B won
-            context.fillStyle = "#220";
+            context.fillStyle = "#990000";
         }
     }
 
