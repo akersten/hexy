@@ -89,3 +89,12 @@ div#selectSize table tr td {
 div#selectSize table tr td:hover {
     background-color: #151515;
 }
+
+a, a:visited {
+    color: #0077BB;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #CC0000;
+}
